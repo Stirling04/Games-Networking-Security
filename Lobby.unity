@@ -242,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &33380929
 Transform:
   m_ObjectHideFlags: 0
@@ -325,6 +325,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MultiplayerLobby, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 6812360274888193154, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 86673244}
+    - target: {fileID: 6812360274888193154, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnJoinRandomRoomClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812360274888193154, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MultiplayerLobby, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6812360274911338921, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -375,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 86673244}
     - target: {fileID: 6812360275173874635, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisconnedButtonClicked
+      value: LeaveLobbyClicked
       objectReference: {fileID: 0}
     - target: {fileID: 6812360275173874635, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -433,6 +445,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MultiplayerLobby, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 6812360275880991981, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 86673244}
+    - target: {fileID: 6812360275880991981, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGameClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812360275880991981, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MultiplayerLobby, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6812360275954169341, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -443,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 86673244}
     - target: {fileID: 6812360276152990339, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LeaveRoom
+      value: LeaveLobbyClicked
       objectReference: {fileID: 0}
     - target: {fileID: 6812360276152990339, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -609,10 +633,16 @@ MonoBehaviour:
   roomNameInput: {fileID: 1955387676}
   playerNameInput: {fileID: 581036159}
   textPrefab: {fileID: 4190149105179721130, guid: 669020eb3e2b5bc468c7cb2bc31ddf5a, type: 3}
+  startGameButton: {fileID: 86673245}
   insideRoomPlayerList: {fileID: 230485079}
   listRoomPanel: {fileID: 2117187674}
   roomEntryPrefab: {fileID: 2667130366036724534, guid: 441c8085485e1cf4eb3fc2764938800c, type: 3}
   listRoomPanelContent: {fileID: 253710523}
+--- !u!1 &86673245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6812360275880991983, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
+  m_PrefabInstance: {fileID: 86673242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &230485079 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6812360276021687927, guid: 63eeed59a09b7964188723bc31f849ad, type: 3}
@@ -1010,11 +1040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1592,11 +1622,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1618,11 +1648,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7652885988734296069, guid: 003ba0168e97d3f4f8f2847621d6f159, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7652885988734296069, guid: 003ba0168e97d3f4f8f2847621d6f159, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7652885989696997033, guid: 003ba0168e97d3f4f8f2847621d6f159, type: 3}
       propertyPath: m_Value
@@ -1837,7 +1867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1380469688
 Transform:
   m_ObjectHideFlags: 0
@@ -2061,11 +2091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2131,11 +2161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2418,11 +2448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2612,11 +2642,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300908184323508864, guid: 2ed00732e6613294693e836e4a77568d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
